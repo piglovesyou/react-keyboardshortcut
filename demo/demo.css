@@ -1,0 +1,25 @@
+.clear-both {
+  clear: both;
+}
+.container {
+  width: 600px;
+  margin: 0 auto;
+}
+.container table {
+  float: right;
+  border-collapse: collapse;
+  margin-right: 2em;
+}
+.container table th,
+.container table td {
+  padding: .4em;
+  border-bottom: 1px #ccc solid;
+  border-right: 1px #ccc solid;
+} .container table tr:last-child th,
+.container table tr:last-child td {
+  border-bottom: none;
+}
+.container table tr th:last-child,
+.container table tr td:last-child {
+  border-right: none;
+}

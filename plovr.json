@@ -1,0 +1,18 @@
+{
+  "id": "react-keyboardshortcut",
+  "paths": [
+	  "./src"
+  ],
+  "inputs": "./src/index.js",
+  "experimental-compiler-options": {
+  },
+  // "mode": "ADVANCED",
+  "mode": "SIMPLE",
+  "level": "VERBOSE",
+  // "externs": [
+  //   "./src/externs.js"
+  // ],
+  "output-file": "dest/out.js",
+  "pretty-print": true
+}
+

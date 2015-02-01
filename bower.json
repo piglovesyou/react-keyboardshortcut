@@ -1,0 +1,19 @@
+{
+  "name": "react-keyboardshortcut",
+  "version": "0.0.0",
+  "authors": [
+    "Takamura Soichi <takamura_s@ariel-networks.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "closure-compiler": "~0.2.6",
+    "react-externs": "https://github.com/steida/react-externs.git#~0.12.11"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "react-keyboardshortcut",
+  "version": "0.0.1",
+  "description": "React Keyboard Shortcut Mixin powered by Google Closure Library",
+  "main": "dist/build.js",
+  "scripts": {
+    "postinstall": "gulp",
+    "demo": "browserify -e demo/demo.js > demo/demo.out.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/piglovesyou/react-keyboardshortcut"
+  },
+  "keywords": [
+    "react",
+    "react.js",
+    "keyboard",
+    "shortcut",
+    "hotkey"
+  ],
+  "author": "piglovesyou@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/piglovesyou/react-keyboardshortcut/issues"
+  },
+  "homepage": "https://github.com/piglovesyou/react-keyboardshortcut",
+  "dependencies": {
+    "closure-compiler": "^0.2.6",
+    "closure-library": "^1.43629075.2",
+    "gulp-closure-compiler": "^0.2.16"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "reactify",
+        {
+          "es6": true
+        }
+      ]
+    ]
+  }
+}
