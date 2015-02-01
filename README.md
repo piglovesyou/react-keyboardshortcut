@@ -55,7 +55,9 @@ var Sample = React.createClass({
 
 ## Install
 
-TODO: write
+```
+$ npm install piglovesyou/react-keyboardshortcut --save
+```
 
 ## Build Demo Locally
 
