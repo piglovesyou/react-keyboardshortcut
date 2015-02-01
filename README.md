@@ -62,6 +62,8 @@ $ npm install piglovesyou/react-keyboardshortcut --save
 ## Build Demo Locally
 
 ```
+$ git clone git@github.com:piglovesyou/react-keyboardshortcut.git
+$ cd react-keyboardshortcut
 $ npm install
 $ npm run demo
 ```
