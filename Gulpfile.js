@@ -4,7 +4,7 @@ var closureCompiler = require('gulp-closure-compiler');
 gulp.task('default', function() {
   gulp.src(['src/*.js', 'node_modules/closure-library/closure/goog/**/*.js'])
     .pipe(closureCompiler({
-      compilerPath: 'bower_components/closure-compiler/lib/vendor/compiler.jar',
+      compilerPath: 'node_modules/closure-compiler/lib/vendor/compiler.jar',
       fileName: 'build.js',
       compilerFlags: {
         closure_entry_point: 'ReactKeyboardshortcut',
