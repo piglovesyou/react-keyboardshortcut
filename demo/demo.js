@@ -5,7 +5,7 @@ var ReactKeyboardShortcut = require('../dist/build');
 
 var Demo = React.createClass({
 
-  mixins: [ReactKeyboardShortcut.bind('onKeyboardShortcut')],
+  mixins: [ReactKeyboardShortcut('onKeyboardShortcut')],
 
   getInitialState() {
     return {

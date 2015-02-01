@@ -10,7 +10,7 @@ var ReactKeyboardShortcut = require('react-keyboardshortcut');
 var Sample = React.createClass({
 
   // Specify a method name to bind
-  mixins: [ReactKeyboardShortcut.bind('onKeyboardShortcut')],
+  mixins: [ReactKeyboardShortcut('onKeyboardShortcut')],
 
   onKeyboardShortcut(event) {
     switch(event.identifier) {
