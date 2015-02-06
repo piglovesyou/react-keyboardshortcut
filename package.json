@@ -5,6 +5,7 @@
   "main": "dist/build.js",
   "scripts": {
     "postinstall": "gulp",
+    "build": "gulp",
     "demo": "browserify -e demo/demo.js > demo/demo.out.js"
   },
   "repository": {

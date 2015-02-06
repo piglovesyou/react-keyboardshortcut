@@ -2,10 +2,21 @@ var React = require('react');
 var ReactKeyboardShortcut = require('../dist/build');
 
 
+var keyboardShortcutMixin = ReactKeyboardShortcut('onKeyboardShortcut', {
+  'A': 'a',
+  'UP': 'up',
+  'DOWN': 'down',
+  'T E S T': 't e s t',
+  'SHIFT_F12': 'shift+f12',
+  'SHIFT_F11 C': 'shift+f11 c',
+  'META_Y': 'meta+y',
+  'G S': 'g s',
+  'S': 's'
+});
 
 var Demo = React.createClass({
 
-  mixins: [ReactKeyboardShortcut('onKeyboardShortcut')],
+  mixins: [keyboardShortcutMixin],
 
   getInitialState() {
     return {
@@ -17,18 +28,6 @@ var Demo = React.createClass({
     this.setState({
       pushedKeys: [e.identifier].concat(this.state.pushedKeys)
     });
-  },
-
-  componentDidMount() {
-    ReactKeyboardShortcut.register('A', 'a');
-    ReactKeyboardShortcut.register('UP', 'up');
-    ReactKeyboardShortcut.register('DOWN', 'down');
-    ReactKeyboardShortcut.register('T E S T', 't e s t');
-    ReactKeyboardShortcut.register('SHIFT_F12', 'shift+f12');
-    ReactKeyboardShortcut.register('SHIFT_F11 C', 'shift+f11 c');
-    ReactKeyboardShortcut.register('META_Y', 'meta+y');
-    ReactKeyboardShortcut.register('G S', 'g s');
-    ReactKeyboardShortcut.register('S', 's');
   },
 
   render() {

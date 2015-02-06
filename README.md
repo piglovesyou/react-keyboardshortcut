@@ -7,10 +7,22 @@ React Keyboard Shortcut Mixin powered by Google Closure Library
 var React = require('react');
 var ReactKeyboardShortcut = require('react-keyboardshortcut');
 
+var keyboardShortcutMixin = ReactKeyboardShortcut('onKeyboardShortcut', {
+  'A': 'a',
+  'UP': 'up',
+  'DOWN': 'down',
+  'T E S T': 't e s t',
+  'SHIFT_F12': 'shift+f12',
+  'SHIFT_F11 C': 'shift+f11 c',
+  'META_Y': 'meta+y',
+  'G S': 'g s',
+  'S': 's'
+});
+
 var Sample = React.createClass({
 
   // Specify a method name to bind
-  mixins: [ReactKeyboardShortcut('onKeyboardShortcut')],
+  mixins: [keyboardShortcutMixin],
 
   onKeyboardShortcut(event) {
     switch(event.identifier) {
@@ -24,26 +36,6 @@ var Sample = React.createClass({
       case 'G S': /* Do something */ break;
       case 'S': /* Do something */ break;
     }
-  },
-
-  componentDidMount() {
-    // First Argument: An identifier which will be on "event.identifier".
-    // Second Argument: Hotkey(s) to be parsed.
-    //                  Normal Keys: See https://code.google.com/p/closure-library/source/browse/closure/goog/events/keynames.js?r=248b8190a01a747ccb7ac634bb2232988a7bb6aa
-    //                  Modifiers: See http://docs.closure-library.googlecode.com/git-history/128f066ee24dedd41959199f66398e48f31b82fd/closure_goog_ui_keyboardshortcuthandler.js.source.html#line484
-    ReactKeyboardShortcut.register('A', 'a');
-    ReactKeyboardShortcut.register('UP', 'up');
-    ReactKeyboardShortcut.register('DOWN', 'down');
-    ReactKeyboardShortcut.register('T E S T', 't e s t');
-    ReactKeyboardShortcut.register('SHIFT_F12', 'shift+f12');
-    ReactKeyboardShortcut.register('SHIFT_F11 C', 'shift+f11 c');
-    ReactKeyboardShortcut.register('META_Y', 'meta+y');
-    ReactKeyboardShortcut.register('G S', 'g s');
-    ReactKeyboardShortcut.register('S', 's');
-  },
-
-  componentDidMount() {
-    // TODO: write unregister method
   },
 
   render() {
