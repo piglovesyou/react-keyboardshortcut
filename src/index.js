@@ -38,7 +38,9 @@ goog.require('goog.ui.KeyboardShortcutHandler');
  * @return {Object} A mixin object
  */
 var ReactKeyboardshortcut = function(listenerName, shortcuts) {
-  if (!goog.global.document) return;
+  if (!goog.global.document) {
+    return {};
+  }
   var shortcutHandler = new goog.ui.KeyboardShortcutHandler(goog.global.document);
   for (var identifier in shortcuts) {
     shortcutHandler.registerShortcut(identifier, shortcuts[identifier]);
