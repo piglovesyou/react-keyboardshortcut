@@ -77,5 +77,5 @@ ReactKeyboardshortcut['Modifiers'] = {
   'META': goog.ui.KeyboardShortcutHandler.Modifiers.META
 };
 
-window['ReactKeyboardshortcut'] = ReactKeyboardshortcut;
+goog.global['ReactKeyboardshortcut'] = ReactKeyboardshortcut;
 

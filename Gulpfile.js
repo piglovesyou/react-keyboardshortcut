@@ -14,7 +14,7 @@ gulp.task('default', function() {
         // Some compiler flags (like --use_types_for_optimization) don't have value. Use null. 
         // use_types_for_optimization: null, 
         only_closure_dependencies: true,
-        output_wrapper: '%output%;\n\nmodule.exports=ReactKeyboardshortcut;',
+        output_wrapper: '%output%;\n\nmodule.exports=this.ReactKeyboardshortcut;',
         jscomp_off: ['es5Strict', 'globalThis'],
         warning_level: 'VERBOSE'
       }
