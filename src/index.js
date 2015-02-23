@@ -32,15 +32,14 @@ goog.require('goog.dom');
 goog.require('goog.events.KeyCodes');
 goog.require('goog.ui.KeyboardShortcutHandler');
 
-// var shortcutHandler = new goog.ui.KeyboardShortcutHandler(document);
-
 /**
  * @param {string} listenerName A method name of a react component
  *    that will be called on any time when any registered keystroked invoked.
  * @return {Object} A mixin object
  */
 var ReactKeyboardshortcut = function(listenerName, shortcuts) {
-  var shortcutHandler = new goog.ui.KeyboardShortcutHandler(document);
+  if (!goog.global.document) return;
+  var shortcutHandler = new goog.ui.KeyboardShortcutHandler(goog.global.document);
   for (var identifier in shortcuts) {
     shortcutHandler.registerShortcut(identifier, shortcuts[identifier]);
   }
